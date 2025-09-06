@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    let passwordBenar = "123";
+let inputPassword;
+
+do {
+    inputPassword = prompt("Masukkan password:");
+    if (inputPassword !== passwordBenar) {
+        alert("Password salah! Coba lagi!");
+    }
+} while (inputPassword !== passwordBenar);
+
+alert("Password benar! Akses diberikan.");
+
+let bensin = 10;
+
+console.log("🚗 ready kingg!")
+while (true){
+    if (bensin > 0){
+        console.log ("bensin tersisa " + bensin + " liter");
+    bensin-=1;    
+
+if (bensin === 3){
+    console.log ("🚗haus bang");
+}
+}else{
+ console.log("bensin abis euy!!");  
+ break ;
+}}
+while(true){
+    let dadu= Math.floor(Math.random() *6)+1;
+    console.log("dapat angka " + dadu );
+if (dadu === 6){
+    console.log("JACKPOT!̸/̸̅̅ ̆̅ ̅̅ ̅̅");
+    break;
+}
+}
+
+
+let tabungan = 0;
+
+while (tabungan < 1000000){
+    tabungan += 100000;
+console.log("tabungan saat ini " + tabungan)
+}
+console.log("tabungan cukup untuk beli figure yukino")
+
+
+while(true){
+    let stop = prompt("ketik stop untuk berhenti!");
+    if (stop === "ZAWARUDOO"){
+        console.log("TIME STOP")
+        break;
+    }else{
+        console.log("anda mengetik " + stop)
+    }
+
+}
+</script>
+</body>
+</html>

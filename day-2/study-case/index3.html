@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .glow {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+body {
+    background-image: url("/assets/aponia.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+@keyframes neon {
+    from {
+        text-shadow:
+            0 0 5px #b67720,
+            0 0 10px #b8a13f,
+            0 0 20px #c2a636c8,
+            0 0 40px #8a8e22;
+    }
+    to {
+        text-shadow:
+            0 0 10px #c0b020,
+            0 0 20px #c88e11,
+            0 0 30px #801212,
+            0 0 50px #b91212,
+            0 0 100px #9e5113;
+    }}
+    </style>
+</head>
+<body>
+    <h1 class="glow">Hasilnya cek console</h1>
+    <script>
+        let alas = 10;
+let tinggi = 5;
+let luas = (alas * tinggi) / 2;
+let umur1 = 18
+console.log("Luas segitiga: " + luas); // Output: 25
+if (umur1 >= 17) {
+    console.log("Anda sudah dewasa."); // Output: Anda sudah dewasa.
+} else {
+    console.log("Anda masih di bawah umur."); // Output: Anda masih di bawah umur.
+}
+console.log(5 == "5"); // Output: true (sama nilai, tipe berbeda)
+console.log(5 === "5"); // Output: false (sama nilai, tipe berbeda
+
+let saldo = 100000;
+let totalBelanja = 120000;
+
+if (saldo >= totalBelanja) {
+    console.log("✅ Pembayaran berhasil!");
+    saldo -= totalBelanja;
+    console.log("Saldo tersisa: Rp" + saldo);
+} else {
+    console.log("❌ Saldo tidak cukup!");
+    console.log("Kurang: Rp" + (totalBelanja - saldo));
+}
+// Output: "❌ Saldo tidak cukup! Kurang: Rp20000"
+
+let umur2 = 19;
+let punyaKTP = true;
+// Harus memenuhi KEDUA syarat (&&)
+if (umur2 >= 18 && punyaKTP) {
+    console.log("✅ Bisa ikut lomba!");
+}else if (umur2 >= 18 && ! punyaKTP) {
+    console.log("❌ kurang memenuhi syarat lomba");
+}
+else {
+    console.log("❌ Tidak memenuhi syarat lomba");
+}
+// Output: "✅ Bisa ikut lomba!"
+    </script>
+</body>
+</html>

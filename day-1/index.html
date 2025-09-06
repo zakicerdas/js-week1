@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>js portofolio</h1>
+<div class="test">
+<button onclick="alert('Hello, World!')"> Say hi!</button>
+<button onclick="handleclick(1)">click</button>
+<button onclick="oneclick(2)">sure?</button>
+<button onclick="clickinfo(3)">TEST</button>
+<button onclick="introclick()">intro</button>
+</div>
+<div class ="card">
+    <h1>I Love</h1>
+    <div class="words">
+        <span class="word">HTML</span>
+        <span class="word">CSS</span>
+        <span class="word">javascript</span>
+        <span class="word">Python</span>
+    </div>
+</div>
+<p class="glow">Hasilnya cek console</p>
+    <script>
+        console.log("Hello, World!");
+
+        var buttonId = 1;
+        var buttonId = 2;
+        var buttonId = 3;
+        let name = "zaki";
+        let a = 1;
+        let b = 2;
+        function showAlert() {
+            alert('Hello, World!');
+        }
+        function handleclick(buttonId1)  {
+            confirm('are you ok?');
+            
+        }
+        function oneclick(buttonId2) {
+            confirm('are you sure?');
+        }
+        function clickinfo(buttonId3) {
+            alert("1 + 2= " + (a + b));
+        }
+        function introclick () {
+            alert("perkenalkan nama saya " + name + ", saya sedang belajar javascript");
+        }
+        function submitbutton() {
+            alert("terimakasih sudah mengirim pesan");
+        }
+        console.log(name);
+        console.log(a + b);
+        console.log(a * b);
+        console.log(a / b);
+        console.log(a - b);
+        console.log(a > b);
+        console.log(a < b);
+    </script>
+</body>
+</html>

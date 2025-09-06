@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!--AI reference-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Item - Sakura Pixel Studio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .coin-display {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #FFD700;
+            text-shadow: 0 0 10px #FFD700;
+            margin-bottom: 30px;
+        }
+
+        .shop-title {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #FF6B8B;
+            text-shadow: 0 0 15px #FF6B8B;
+        }
+
+        .items-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .item-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            transition: transform 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .item-card:hover {
+            transform: translateY(-5px);
+            border-color: #FF6B8B;
+        }
+
+        .item-image {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+        }
+
+        .item-name {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #48CFAD;
+        }
+
+        .item-price {
+            font-size: 1.1rem;
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        .buy-btn {
+            background: linear-gradient(45deg, #FF6B8B, #FF8E53);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .buy-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #FF6B8B;
+        }
+
+        .buy-btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            font-weight: bold;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .success {
+            background: rgba(72, 207, 173, 0.3);
+            color: #48CFAD;
+            border: 2px solid #48CFAD;
+            opacity: 1;
+        }
+
+        .error {
+            background: rgba(255, 107, 139, 0.3);
+            color: #FF6B8B;
+            border: 2px solid #FF6B8B;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="shop-title">🎮 Toko Item Sakura Pixel 🎮</h1>
+        
+        <div class="coin-display" id="coinDisplay">
+            💰 Coin: <span id="coinAmount">500</span>
+        </div>
+
+        <div class="items-container">
+            <!-- Item 1 -->
+            <div class="item-card">
+                <img src="assets/—Pngtree—sharp game sword illustration_4678373.png" alt="Pedang Legenda" class="item-image">
+                <div class="item-name">Pedang Legenda</div>
+                <div class="item-price">💰 200 Coin</div>
+                <button class="buy-btn" onclick="buyItem(200, 'Pedang Legenda')">Beli Sekarang</button>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="item-card">
+                <img src="assets/potion-removebg-preview.png" alt="Potion Penyembuh" class="item-image">
+                <div class="item-name">Potion Penyembuh</div>
+                <div class="item-price">💰 50 Coin</div>
+                <button class="buy-btn" onclick="buyItem(50, 'Potion Penyembuh')">Beli Sekarang</button>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="item-card">
+                <img src="assets/—Pngtree—an ancient medieval armor_14887782.png" alt="Armor Perlindungan" class="item-image">
+                <div class="item-name">Armor Perlindungan</div>
+                <div class="item-price">💰 350 Coin</div>
+                <button class="buy-btn" onclick="buyItem(350, 'Armor Perlindungan')">Beli Sekarang</button>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="item-card">
+                <img src="assets/cincin-removebg-preview.png" alt="Cincin Ajaib" class="item-image">
+                <div class="item-name">Cincin Ajaib</div>
+                <div class="item-price">💰 150 Coin</div>
+                <button class="buy-btn" onclick="buyItem(150, 'Cincin Ajaib')">Beli Sekarang</button>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script>
+        let currentCoins = 10000;
+
+        function buyItem(price, itemName) {
+            const messageElement = document.getElementById('message');
+            
+            // Reset message
+            messageElement.className = 'message';
+            
+            if (currentCoins >= price) {
+                // Pembelian berhasil
+                currentCoins -= price;
+                document.getElementById('coinAmount').textContent = currentCoins;
+                
+                messageElement.textContent = `🎉 Pembelian berhasil! Kamu membeli ${itemName} seharga ${price} Coin!`;
+                messageElement.classList.add('success');
+                
+                // Update button status
+                updateButtonStatus();
+                
+            } else {
+                // Coin tidak cukup
+                const needed = price - currentCoins;
+                messageElement.textContent = `❌ Coin tidak cukup! Butuh ${needed} Coin lagi untuk membeli ${itemName}.`;
+                messageElement.classList.add('error');
+            }
+        }
+
+        function updateButtonStatus() {
+            const buttons = document.querySelectorAll('.buy-btn');
+            buttons.forEach(button => {
+                const price = parseInt(button.getAttribute('onclick').match(/\d+/)[10000]);
+                if (currentCoins < price) {
+                    button.disabled = true;
+                    button.textContent = 'Coin Kurang';
+                } else {
+                    button.disabled = false;
+                    button.textContent = 'Beli Sekarang';
+                }
+            });
+        }
+
+        // Initialize button status
+        updateButtonStatus();
+    </script>
+</body>
+</html>

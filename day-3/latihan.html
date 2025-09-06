@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .glow {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+body {
+    background-image: url("/assets/HOTH.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+@keyframes neon {
+    from {
+        text-shadow:
+            0 0 5px #4507e1,
+            0 0 10px #071094,
+            0 0 20px #dd0cf0,
+            0 0 40px #6803ff;
+    }
+    to {
+        text-shadow:
+            0 0 10px #0202e3,
+            0 0 20px #420ae9,
+            0 0 30px #1138ff,
+            0 0 50px #8323f1,
+            0 0 100px #ff26f1;
+    }}
+    </style>
+</head>
+<body>
+    <h1 class="glow">Hasilnya cek console</h1>
+    <script>
+        let umur = 17 // Ganti angka ini untuk menguji umur
+
+        if (umur >= 17) {
+            console.log("dewasa");
+        } else if (umur <= 17 && umur >= 10 ){
+            console.log("remaja");
+        }else{
+            console.log("anak-anak")
+        }
+
+        for (let angka = 1; angka <= 10; angka++){
+            console.log(angka)
+        }
+
+        let hari = 1;
+        switch (hari) {
+    case 1:
+        console.log("Senin");
+        break;
+    case 2:
+        console.log("Selasa");
+        break;
+    case 3:
+        console.log("Rabu");
+        break;
+    case 4:
+        console.log("Kamis");
+        break;
+    case 5:
+        console.log("Jum'at");
+        break;
+    case 6:
+        console.log("Sabtu");
+        break;
+    case 7:
+        console.log("minggu");
+        break;
+    default :
+        console.log("gak ada hari lain woy")
+        }
+    </script>
+</body>
+</html>

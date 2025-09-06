@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .glow {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+body {
+    background-image: url("/assets/kevin-kaslana.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+@keyframes neon {
+    from {
+        text-shadow:
+            0 0 5px #4023c1,
+            0 0 10px #4023c1,
+            0 0 20px #561eb0,
+            0 0 40px #4010b0;
+    }
+    to {
+        text-shadow:
+            0 0 10px #120405,
+            0 0 20px #560606,
+            0 0 30px #801212,
+            0 0 50px #b91212,
+            0 0 100px #fe0808;
+    }}
+    </style>
+</head>
+<body>
+    <h1 class="glow">Hasilnya cek console</h1>
+    <script>
+        const name = "zaki";
+        let umur = 19; // bisa diubah karena menggunakan variabel let
+        let status = "belum menikah"
+        const phi = 3.14; // tidak bisa diubah karena menggunakan variabel const
+        alamat = "indonesia"; // ❌ JANGAN LAKUKAN INI!// Variabel akan menjadi global dan bisa menyebabkan bug
+        let saldoAwal = 1000000;
+        let pengeluaran = 350000;
+        let saldoAkhir = saldoAwal - pengeluaran;
+
+        console.log(saldoAkhir); // Output: 650000
+console.log(saldoAkhir); // Output: 650000
+        console.log("umur saya " + umur + " tahun");
+        phi = 22; // ini akan error karena phi adalah const
+        console.log ("saya tinggal di " + alamat);
+    </script>
+</body>
+</html>

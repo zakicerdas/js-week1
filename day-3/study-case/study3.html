@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.glow {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+body {
+    background-image: url("/assets/herrscher-of-sentience.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+@keyframes neon {
+    from {
+        text-shadow:
+            0 0 5px #ffb347,
+            0 0 10px #ffcc80,
+            0 0 20px #f7cac9,
+            0 0 40px #e0bbff;
+    }
+    to {
+        text-shadow:
+            0 0 10px #ffb6b9,
+            0 0 20px #fae3d9,
+            0 0 30px #bbded6,
+            0 0 50px #8ac6d1,
+            0 0 100px #b2f7ef;
+    }}
+    </style>
+</head>
+<body>
+    <h1 class="glow">Hasilnya cek console</h1>
+    <script>
+        for (let angka = 1; angka <= 100; angka++) { // pengulangann angka dari 1-100
+            console.log (angka)
+        }
+
+        for (let number = 0 ; number <= 50 ; number++) { // pengulangan angka dari 0-50 tapi hanya berupa bilangan genap
+            if (number % 2 === 0)
+            console.log (number)
+        }
+
+        let total = 0;
+        for (let num = 1 ; num <= 10 ; num++) {
+            total += num; // total = total + num
+            if (num <= 10) {
+                console.log (total)
+            }}
+
+       
+       console.log("=== TABEL PERKALIAN 5 ===");
+for (let i = 1; i <= 10; i++) {
+    let hasil = 5 * i;
+    console.table ("5 x " + i + " = " + hasil)
+}
+console.log ("==Segitiga==")
+for (let a = 1; a <= 10; a++){
+    let star ="";
+for (let b = 1; b <= a; b++){
+    star +="*";
+}
+console.log(star);
+}
+
+        
+
+        
+
+    
+    </script>
+</body>
+</html>

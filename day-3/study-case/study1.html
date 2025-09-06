@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .glow {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+body {
+    background-image: url("/assets/HOV.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+@keyframes neon {
+    from {
+        text-shadow:
+            0 0 5px #4023c1,
+            0 0 10px #4023c1,
+            0 0 20px #561eb0,
+            0 0 40px #4010b0;
+    }
+    to {
+        text-shadow:
+            0 0 10px #120405,
+            0 0 20px #560606,
+            0 0 30px #801212,
+            0 0 50px #b91212,
+            0 0 100px #fe0808;
+    }}
+    </style>
+</head>
+<body>
+    <h1 class="glow">Hasilnya cek console</h1>
+
+    <script>
+        let number = 7; // Ganti angka ini untuk menguji ganjil/genap
+
+        if (number % 2 === 0) {
+            console.log("genap");
+        } else {
+            console.log("ganjil");
+        }
+        
+        let umur = 17 // Ganti angka ini untuk menguji umur
+
+        if (umur >= 17) {
+            console.log("silahkan lanjut memesan tiket");
+        } else {
+            console.log("maaf, anda belum cukup umur");
+        }
+        
+        let suhu = 36; // Ganti angka ini untuk menguji suhu
+
+        if (suhu >= 36){
+            console.log("panas");
+        } else if (suhu <= 35 && suhu >= 25){
+            console.log("normal");
+        } else {
+            console.log("dingin");
+        }
+
+        const username = "Kominfo" // ganti username dan password unutk menguji
+        const password = "admin123" 
+
+        if (username === "Kominfo" && password === "admin123"){
+            console.log("login berhasil");
+        } else if (username !== "Kominfo" && password === "admin123") { 
+            console.log("Username salah");
+        } else if (username === "Kominfo" && password !== "admin123") {
+            console.log("password salah")
+        } else {
+            console.log ("login gagal")
+        }
+
+        const nilai = "S+" // ganti nilai untuk menguji
+
+        if (nilai === "A") {
+            console.log("perfect,kamu lulus")  
+        }else if (nilai === "B"){
+            console.log("not too bad,kamu lulus")
+        }else if (nilai === "C"){
+            console.log("jelek,tapi terpaksa saya luluskan")
+        }else if (nilai === "S+"){
+            console.log("subete no ningen desu....")
+        }
+        else {
+            console.log("BODOH, MELIHATNYA PUN TAK SUDI!")
+        }
+
+
+    </script>
+</body>
+</html>

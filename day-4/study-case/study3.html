@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="btn">
+    <button onclick="sapa(sisi)"><img src="/assets/ely-removebg-preview.png" alt=""></button>
+</div>
+    
+    <script>
+    let nama= prompt ("dengan apa saya harus memanggil anda master?");
+   if (!nama){
+    nama= "goshujin";
+   }function sapa(){
+    alert("okaerinasai, " + nama + "-sama ⸜(｡˃ ᵕ ˂ )⸝♡")
+   }
+sapa();
+
+    function luaspersegi (sisi) {
+        return sisi*sisi
+    }
+    console.log(luaspersegi(5))
+    console.log(luaspersegi(7))
+
+    function biodata(nama,umur,asal,mimpi){
+        const output = "nama saya " + nama + ", umur saya " + umur + ", saya dari " + asal + ", dan mimpi saya menjadi " + mimpi;
+        return output; 
+
+    }
+    let biodatadiri = biodata("zaki","17 tahun","tanggerang","kapal laut")
+    console.log(biodatadiri)
+
+    function cekAngka(angka){
+        if (angka %2 === 0){
+            console.log("angka ini genap");
+        }else{
+            console.log("angka ini ganjil");
+        }
+    }
+    cekAngka(7);
+    cekAngka(10);
+
+  function daftarMenu(menu){
+    console.log("daftar menu :");
+    for (let i = 0; i < menu.length; i++) {
+        console.log((i+1) + ". " + menu[i]);
+        
+    }
+  }
+  let daftarmenu =["burjer","pija","eskrim","roti bakar"];
+  daftarMenu(daftarmenu);
+
+  function LuasSegitiga(alas, tinggi) {
+    return (alas * tinggi) ;
+}
+
+console.log(LuasSegitiga(6, 8));
+
+function KelilingLingkaran(jarijari) {
+    return 2 * Math.PI* jarijari;
+}
+
+let jarijari = 15;
+
+console.log("keliling lingkaran dengan jari jari " + jarijari + " adalah " + KelilingLingkaran(jarijari));
+
+function hitung(a,b){
+    return a + b;
+}
+console.log (hitung(5,4));
+
+function kapital(besar){
+    return besar.toUpperCase();
+
+}
+console.log("yatta menjadi " + kapital("yatta"))
+
+function diskonTol(harga,diskon){
+    return harga-(harga*diskon);
+}
+console.log("barang dengan harga 100000 setelah diberi diskon 12% adalah " + diskonTol(100000,0.12));
+</script>
+</body>
+</html>

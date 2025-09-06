@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let kurangi = (a, b) => a - b;
+        console.log("hasil pengurangan 1-2 adalah "  + kurangi(1,2));
+
+        let hitungPajak = (harga, persen) => harga + (harga * persen);
+        console.log("setelah kena pajak harganya menjadi " + hitungPajak(1000000,0.12))
+
+        let salam = (nama) =>" ٱلسَّلَامُ عَلَيْكُمْ " + nama + "-sama";
+       alert(salam("zaki"))
+       console.log(salam("zaki"))
+
+       const hitungUmur = (tahunLahir) => {
+        let tahunSekarang = new Date().getFullYear();
+        return tahunSekarang - tahunLahir;
+       }
+       console.log("saya lahir tahun 2007, umur saya " + hitungUmur(2007) + " tahun") 
+
+       const KonversiSuhu = (C) => (C * 9/2) + 32;
+       console.log("40° jika di konversikan ke Fahrenheit menjadi " + KonversiSuhu(40) + " °F");
+
+    </script>
+</body>
+</html>

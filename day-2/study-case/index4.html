@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.glow {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+body {
+    background-image: url("/assets/eden-honkai-impact.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+@keyframes neon {
+    from {
+        text-shadow:
+            0 0 5px #e99218,
+            0 0 10px #ddff33,
+            0 0 20px #fbff0dc8,
+            0 0 40px #f8ff32;
+    }
+    to {
+        text-shadow:
+            0 0 10px #ffe602,
+            0 0 20px #fbff18,
+            0 0 30px #ecff16,
+            0 0 50px #f0e809,
+            0 0 100px #fafa1a;
+    }}
+    </style>
+</head>
+<body>
+    <h1 class="glow">Hasilnya cek console</h1>
+    <script>
+        const name = "zaki";
+        let umur = 18;
+        let kelas = "programmer B"
+        let alamat = "tangerang";
+        console.log("nama saya " + name + " umur saya " + umur + "tahun, saya dari kelas " + kelas + ",dan saya tinggal di " + alamat);
+
+        let buah  = ["mangga", "apel", "jeruk", "semangka", "anggur", "nanas"];
+        console.log("daftar buah:")
+        console.table(buah);
+
+        let namaUser = prompt("Hai! Siapa namamu?");
+
+        alert("Selamat datang, " + namaUser + "! Senang bertemu denganmu~ ");
+
+        let konfirmasi = confirm("apakah kamu ingin melanjutkannya?");
+        if (konfirmasi) {
+            alert ("data berhasil dihapus");
+        }else{
+            alert ("data tidak jadi dihapus");
+        }
+    </script>
+</body>
+</html>

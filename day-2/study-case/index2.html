@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .glow {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+body {
+    background-image: url("/assets/mobius-honkai-impact.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+@keyframes neon {
+    from {
+        text-shadow:
+            0 0 5px #0e8628,
+            0 0 10px #139e4f,
+            0 0 20px #1db815,
+            0 0 40px #30c616;
+    }
+    to {
+        text-shadow:
+            0 0 10px #08331e,
+            0 0 20px #0eaf59,
+            0 0 30px #1edd21,
+            0 0 50px #2fe72c,
+            0 0 100px #07ff07;
+    }}
+    </style>
+</head>
+<body>
+    <h1 class="glow">Hasilnya cek console</h1>
+    <script>
+        const judulbuku = "my land lady noona";
+        const jumlahhalaman = 200;
+        let tersedia = true; // bisa diubah karena menggunakan variabel let
+        let lampunyala =true;
+        let lampumati = false;
+        let uangdompet = null; // null artinya tidak ada nilai
+        console.log(lampunyala); // Output: true
+        console.log(lampumati); // Output: false
+        console.log("uang yaang tersisa di dompet saya " + uangdompet); 
+    </script>
+</body>
+</html>

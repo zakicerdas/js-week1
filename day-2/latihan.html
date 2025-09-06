@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+         .glow {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+body {
+    background-image: url("/assets/honkai-kalpas.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+@keyframes neon {
+    from {
+        text-shadow:
+            0 0 5px #ec8610,
+            0 0 10px #b33b17,
+            0 0 20px #df3214,
+            0 0 40px #c61616;
+    }
+    to {
+        text-shadow:
+            0 0 10px #ff0909,
+            0 0 20px #b42121,
+            0 0 30px #fa3f0c,
+            0 0 50px #ff0000,
+            0 0 100px #ff0707;
+    }}
+</style>
+<body>
+    <h1 class="glow">Hasilnya cek console</h1>
+    <script>
+        const name = "fufufafa";
+        let umur = 21;
+        var alamat = "tangerang";
+        let a = 10;
+        let b = 5;
+        console.log("nama saya " + name + " umur saya " + umur + "tahun, dan saya tinggal di " + alamat);
+        console.log(a >= b);
+    </script>
+</body>
+</html>

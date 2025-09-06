@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.glow {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: neon 1.5s ease-in-out infinite alternate;
+}
+body {
+    background-image: url("/assets/elyy.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+@keyframes neon {
+    from {
+        text-shadow:
+            0 0 5px #da11b5,
+            0 0 10px #c51b79,
+            0 0 20px #ff15ad,
+            0 0 40px #ff1093;
+    }
+    to {
+        text-shadow:
+            0 0 10px #ff0cc2,
+            0 0 20px #ff0090,
+            0 0 30px #cf33b8,
+            0 0 50px #ff46b8,
+            0 0 100px #c4006c;
+    }}
+    </style>
+</head>
+<body>
+    <h1 class="glow">Hasilnya cek console</h1>
+    <script>
+        let bulan = 3;// Output: "Maret"
+
+switch (bulan) {
+    case 1:
+        console.log("Januari");
+        break;
+    case 2:
+        console.log("Februari");
+        break;
+    case 3:
+        console.log("Maret");
+        break;
+    case 4:
+        console.log("April");
+        break;
+    case 5:
+        console.log("Mei");
+        break;
+    case 6:
+        console.log("Juni");
+        break;
+    case 7:
+        console.log("Juli");
+        break;
+    case 8:
+        console.log("Agustus");
+        break;
+    case 9:
+        console.log("September");
+        break;
+    case 10:
+        console.log("Oktober");
+        break;
+    case 11:
+        console.log("November");
+        break;
+    case 12:
+        console.log("Desember");
+        break;
+    default:
+        console.log("Bulan tidak valid! Hanya 1-12!");
+}
+
+let pilihan = 1;// Output: " Pizza - Rp 50.000"
+
+switch (pilihan) {
+   
+    case 1:
+        console.log("Pizza - Rp 50.000");
+        break;
+    case 2:
+        console.log("Ramen - Rp 30.000");
+        break;
+    case 3:
+        console.log("Sushi - Rp 40.000");
+        break;
+    default:
+        console.log("❌ Menu tidak tersedia!");
+}
+
+let gender = "P";// Output: "Jenis kelamin: Perempuan"
+
+switch (gender) {
+    case "L":
+        console.log("Jenis kelamin: Laki-laki");
+        break;
+    case "P":
+        console.log("Jenis kelamin: Perempuan");
+        break;
+    default:
+        console.log("Bencong kah?");
+}
+
+let pendidikan = 3;
+
+switch (pendidikan) {
+    case 1:
+        console.log("SD");
+        break;
+    case 2:
+        console.log("SMP");
+        break;
+    case 3:
+        console.log("SMA");
+        break;
+    default:
+        console.log("white room")
+}
+
+let lampu = "MERAH";// Output: "BERHENTI!"
+
+switch (lampu.toUpperCase()) {
+    case "MERAH":
+        console.log("BERHENTI!");
+        break;
+    case "KUNING":
+        console.log("HATI-HATI!");
+        break;
+    case "HIJAU":
+        console.log("JALAN!");
+        break;
+    default:
+        console.log("🚨 Lampu tidak dikenali!");
+}
+
+    </script>
+</body>
+</html>
