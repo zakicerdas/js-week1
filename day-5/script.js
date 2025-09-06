@@ -24,12 +24,18 @@
 
         }   
         console.log(namaMentor);
-        try{console.log(namaGuru)}catch(error){console.log(error.message)}
+        try{
+         console.log(namaGuru)
+      }catch(error){
+         console.error(error.message)}
          //hasilnya error karena berada dalam function
 
         //3.
         for(let i = 0; i <= 5; i++){}
-        try{console.log(i)}catch(error){console.log(error.massage)}
+        try{
+         console.log(i)
+      }catch(error){
+         console.error(error.massage)}
         //hasilnya error karena "i" dipakai di luar perulangan
 
 
@@ -37,7 +43,10 @@
         for(let a = 0; a <= 5; a++){
             console.log(a);
         }
-         try{console.log(a)}catch(error){console.log(error.massage)}
+         try{
+            console.log(a)
+         }catch(error){
+            console.error(error.massage)}
          
          for(var b = 0; b <= 5; b++){
             console.log (b);
@@ -74,14 +83,22 @@
          // undefined karena variabel "var" diangkat tapi kosong
 
          //2.
-         try{console.log(angka)}catch(error){console.log(error.massage)}
-            let angka = 120;
-         //harusnya hasilnya error, tapi karena saya menggunakan try agar bisa terus berjalan kode selanjutnya, hasilnya undefined
+         try{
+         console.log(angka);
+         let angka;
+        }catch(error){
+         console.error(error.message);
+        }
+         //harusnya hasilnya error
 
          //3.
-         try{console.log(sekolah)}catch(error){console.log(error.massage)}
-            const sekolah = "Rumah IT"
-         //harusnya hasilnya error, tapi karena saya menggunakan try agar bisa terus berjalan kode selanjutnya, hasilnya undefined
+        try{
+         console.log(sekolah);
+         const sekolah = "Rumah IT";
+        }catch(error){
+         console.error(error.message);
+        }
+         // hasilnya error
 
          //4.
          salam(); // bisa jalan
